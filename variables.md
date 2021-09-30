@@ -1,5 +1,5 @@
-Variables
-==========
+01 - Variables
+==============
 
 A variable simply represents something that we can use to hold data. To declare a variable, (in this case an integer), simply type the following:
 ```c++
