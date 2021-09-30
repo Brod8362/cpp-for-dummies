@@ -28,6 +28,7 @@ We can also increase or decrease it by more than one.
 int myVar = 17;
 myVar = myVar - 4;
 //myVar is now equal to 13
+```
 
 Multiplication/Division/Modulo
 ------------------------------
@@ -37,7 +38,7 @@ int myVar = 3;
 int product = myVar * 4;
 //product is now equal to 12
 
-int quotient = myVar / 2;
+int quotient = product / 2;
 //quotient is now equal to 6. note that the value of myVar is unchanged
 ```
 Beware of divison in particular. If you divide 5 by 2, for example, you'd expect to get the result 2.5.
@@ -47,7 +48,7 @@ If you had two int variables, and you want to divide them using floating point d
 int num1, num2;
 num1 = 5;
 num2 = 2;
-double myQuotient = (double)num1/num2;
+double myQuotient = num1/(double)num2;
 //result is 2.5
 ```
 Make sure to store the result in a datatype that can handle decimals (so, floats or doubles.)
@@ -61,7 +62,7 @@ Shortcuts
 Instead of writing something like `myVar = myVar + 4;`, you can actually use a shorthand operator.
 Just type `myVar += 4;`. This works for all of the main operators, and thus `+=`, `-=`, `*=`, `/=`, and `%=` all exist and work as you'd expect.
 
-Shortcuts of Shortcuts
+Shortcuts of shortcuts
 ----------------------
 You'll often find yourself needing to add one or subtract one from variables. You can of course do `+= 1` or `-= 1`, however there's once again an easier way.
 `myVar++` is equal to `myVar += 1`, and `myVar--` is equal to `myVar-=1`.
