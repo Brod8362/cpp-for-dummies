@@ -19,12 +19,12 @@ Well, looks like it's time to go over the *primitive types* that C/C++ have to o
 The size for all types is repesented in bytes on a modern, x86 64 bit system using GCC. Sizes may differ when running a system of different architecture.
 
 
-int vs long
+¹: int vs long
 -----------
 `int` vs `long` is an interesting tidbit of history, as they're both the same size in bytes, and thus hold the same values.  So why does `long` exist?
 It used to be that `int` was actually a 2-byte datatype (16 bits), and `long` was 4 bytes. 
 As technology advanced, and we moved from 16 bit computing to 32 bit computing (and nowadays, 64bit computing),`int` was expanded to be 4 bytes in size, 
-however `long` also remained 4 bytes. This is why `long long` and `short` were created - `short` filled the 2-byte type gap, and `long` represents something
+however `long` also remained 4 bytes. This is why `long long` and `short` were created - `short` filled the 2-byte type gap, and `long long` represents something
 actually longer than an `int`. (Typically 8 bytes.)
 
 signed vs unsigned
@@ -39,5 +39,5 @@ If we choose to represent our variables including negatives, we have to give up 
 void
 ----
 `void` is a special datatype in that it represents nothing. You can't have a `void` variable (with the exception of `void*` but we'll get to that when we cover pointers),
-but you *can* have a function that returns `void`. All that means is that the function returns nothing 
+but you *can* have a function that returns `void`. All that means is that the function returns nothing.
 
