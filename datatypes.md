@@ -16,6 +16,8 @@ Well, looks like it's time to go over the *primitive types* that C/C++ have to o
 | `float`      | A decimal number, called "floating point".              | 4                        | It's complicated                                                  |
 | `double`     | A larger version of a float, capable of more precision. | 8                        | It's complicated                                                  |
 | `byte`       | A single byte. Interchangeable with `char`.             | 1                        | -127 to 127 (signed) 0 to 255 (unsigned)                          |
+
+
 The size for all types is repesented in bytes on a modern, x86 64 bit system using GCC. Sizes may differ when running a system of different architecture.
 
 
