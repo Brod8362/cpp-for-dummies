@@ -39,7 +39,7 @@ What are these scary messages when I compile?
 ---------------------------------------------
 The `-Wall` flag means "warn all", and will give you warnings for any potential issue it finds.
 - If the text is highlighted in blue or pink, then it means it won't stop your program from compiling, but there's a solid chance it is a problem or may cause unintended behavior.
-- If the text is highlted in red, that means it is an error, and your program will NOT compile. You will need to fix the error before being able to compile your code.
+- If the text is highlighted in red, that means it is an error, and your program will NOT compile. You will need to fix the error before being able to compile your code.
 
 (If your terminal doesn't support color text, it does say `warning`, `info`, or `error` at the beginning of the lines.)
 
@@ -49,7 +49,7 @@ That means you need to install a compiler.
 
 For Windows, your best bet is following [this guide](https://code.visualstudio.com/docs/cpp/config-mingw) by microsoft. (Sorry, I don't use windows, and have little experience developing on it.)
 
-If you're running Linux, check your package manager. For Arch Linux, you need to install the `base-devel` group. On Ubuntu, you can just install the `g++` package.
+If you're running Linux, check your package manager. For Arch Linux, you need to install the `base-devel` group. On Ubuntu, you can just install the `g++` and `build-essential` packages.
 If you're running another flavor of Linux, you should be able to search through your package manager and find something similar.
 
 On macOS, it's incredibly easy. The first time you to try run `g++` (if you don't have it), a window will pop up asking you to install it. Just click OK and the hard work will be done for you.
