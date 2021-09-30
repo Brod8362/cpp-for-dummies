@@ -6,28 +6,32 @@ Well, looks like it's time to go over the *primitive types* that C/C++ have to o
 
 | **typename** | **description**                                         | **size (bytes, x86-64)** | **range of values**                                               |
 |--------------|---------------------------------------------------------|--------------------------|-------------------------------------------------------------------|
-| `int`        | An integer number                                       | 4                        | -2147483648 to 2147483647 (signed) 0 to 4294967295 (unsigned)     |
-| `long`       | A "larger"¹ int                                         | 4                        | -2147483648 to 2147483647 (signed) 0 to 4294967295 (unsigned)     |
-| `long long`  | An actually larger int                                  | 8                        | (-2^63) to (2^63)-1 (signed) 0 to 18446744073709551615 (unsigned) |
-| `short`      | A smaller in                                            | 2                        | -32767 to 32767 (signed) 0 to 65535 (unsigned)                    |
-| `char`       | A single character. Interchangeable with `byte`.        | 1                        | -127 to 127 (signed) 0 to 255 (unsigned)                          |
+| `int`        | An integer number                                       | 4                        | -2147483648 to 2147483647 (signed), 0 to 4294967295 (unsigned)     |
+| `long`       | A "larger"¹ int                                         | 4 (win) 8 (linux)        | -2147483648 to 2147483647 (signed), 0 to 4294967295 (unsigned)     |
+| `long long`  | An actually larger int                                  | 8                        | (-2^63) to (2^63)-1 (signed), 0 to 18446744073709551615 (unsigned) |
+| `short`      | A smaller in                                            | 2                        | -32767 to 32767 (signed), 0 to 65535 (unsigned)                    |
+| `char`       | A single character. Interchangeable with `byte`.        | 1                        | -127 to 127 (signed), 0 to 255 (unsigned)                          |
 | `bool`       | A true or false value.                                  | 1                        | true, false                                                       |
 | `void`       | The concept of nothing.                                 | N/A                      | N/A                                                               |
-| `float`      | A decimal number, called "floating point".              | 4                        | It's complicated                                                  |
-| `double`     | A larger version of a float, capable of more precision. | 8                        | It's complicated                                                  |
-| `byte`       | A single byte. Interchangeable with `char`.             | 1                        | -127 to 127 (signed) 0 to 255 (unsigned)                          |
+| `float`      | A decimal number, called "floating point".              | 4                        | It's complicated²                                                 |
+ `double`     | A larger version of a float, capable of more precision. | 8                        | It's complicated²                                                  |
+| `byte`       | A single byte. Interchangeable with `char`.             | 1                        | -127 to 127 (signed), 0 to 255 (unsigned)                          |
 
 
 The size for all types is repesented in bytes on a modern, x86 64 bit system using GCC. Sizes may differ when running a system of different architecture.
 
-
 ¹: int vs long
------------
+--------------
 `int` vs `long` is an interesting tidbit of history, as they're both the same size in bytes, and thus hold the same values.  So why does `long` exist?
 It used to be that `int` was actually a 2-byte datatype (16 bits), and `long` was 4 bytes. 
 As technology advanced, and we moved from 16 bit computing to 32 bit computing (and nowadays, 64bit computing),`int` was expanded to be 4 bytes in size, 
 however `long` also remained 4 bytes. This is why `long long` and `short` were created - `short` filled the 2-byte type gap, and `long long` represents something
 actually longer than an `int`. (Typically 8 bytes.)
+
+sizeof()
+--------
+C/C++ have a function called `sizeof` which returns the number of bytes a datatype uses. This works not only for primitive types, but for user defined types aswell.
+You can pass in either a typename (e.g `sizeof(int)`) or an actual object (`sizeof(myVar)`).
 
 signed vs unsigned
 ------------------
@@ -42,4 +46,10 @@ void
 ----
 `void` is a special datatype in that it represents nothing. You can't have a `void` variable (with the exception of `void*` but we'll get to that when we cover pointers),
 but you *can* have a function that returns `void`. All that means is that the function returns nothing.
+
+²: Floating point values and the mantissa
+--------------------------------------
+Floating point numbers are made up of several components - a sign bit, an exponent, and a mantissa. I'm not going to get into how they work here, as it's somewhat complicated and not important for the time being. 
+However, while they do have a defined range, it's not fair to say they can occupy *every* number in that range, as they cannot.
+Floating point numbers have a distribution that decreases as you approach either infinity, meaning there are fewer "possible" numbers to represent values, and the difference between each distinct value gets larger the further out you go.
 
