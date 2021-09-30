@@ -7,7 +7,7 @@ A collection of basic C++ concepts to help beginners understand concepts.
 
 Chapters
 ========
-- 00: Hello, world!
+- [00: Hello, world!](https://github.com/Brod8362/cpp-for-dummies/blob/main/intro.md)
 - [01: Variables](https://github.com/Brod8362/cpp-for-dummies/blob/main/variables.md)
 - [02: Datatypes](https://github.com/Brod8362/cpp-for-dummies/blob/main/datatypes.md)
 - [03: Operators](https://github.com/Brod8362/cpp-for-dummies/blob/main/operators.md)
