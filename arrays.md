@@ -1,4 +1,4 @@
-04 - Arrays
+05 - Arrays
 ===========
 
 So being able to store values is pretty nice, but it would be even better if we could bundle multiple of the same value together into a group.
