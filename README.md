@@ -13,7 +13,7 @@ Chapters
 - [03: Operators](https://github.com/Brod8362/cpp-for-dummies/blob/main/operators.md)
 - [04: Input/Output](https://github.com/Brod8362/cpp-for-dummies/blob/main/input_output.md)
 - [05: Arrays/Vectors](https://github.com/Brod8362/cpp-for-dummies/blob/main/arrays.md)
-- 06: Scope
+- [06: Scope](https://github.com/Brod8362/cpp-for-dummies/blob/main/scope.md)
 - 07: Control Flow (`if`/`else`/`switch`)
 - 08: Loops (`for`/`while`)
 - 09: Functions
